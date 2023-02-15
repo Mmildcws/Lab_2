@@ -122,7 +122,14 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  Resolution();
+	  static uint32_t timestamp = 0;
+	  if (HAL_GetTick()>= timestamp)
+	  {
+		  timestamp = HAL_GetTick()+1000;
+		  Resolution();
+
+	  }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
