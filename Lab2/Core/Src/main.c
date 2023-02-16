@@ -55,17 +55,7 @@ uint32_t averageVoltageTemp=0;
 uint32_t SumVoltageTemp=0;
 uint32_t averageTemp=0;
 uint16_t adcRawData[20];
-typedef union
-{
-	struct
-	{
-		uint16_t ADC_IN0;
-		uint16_t Temsensor;
-	}SubData;
-	uint16_t buffer[2];
-}DMA_ADC_BufferType;
 
-DMA_ADC_BufferType buffer[10];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
